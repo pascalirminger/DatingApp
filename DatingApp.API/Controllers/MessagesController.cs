@@ -86,7 +86,7 @@ namespace DatingApp.API.Controllers
             if (recipient == null)
                 return BadRequest("Coult not find user");
         
-            var message = Mapper.Map<Message>(messageForCreationDto);
+            var message = _mapper.Map<Message>(messageForCreationDto);
 
             _repo.Add(message);
 
